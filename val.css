@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: pink;
+}
+
+.first-line{
+    display: flex;
+}
+
+p, span{
+    font-family: "Tangerine";
+    font-size: 3.2em;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    white-space: nowrap;
+    color: aliceblue;
+    text-shadow: .03em .03em 0 rgba(254, 59, 151, .7);
+    display: contents;
+    font-weight: bolder;
+    overflow: hidden;
+}
+
+span{
+    color: #000;
+}
+
+.heart{
+    width: 100px;
+    height: 90px;
+    transform: scale(1);
+    animation: heartbeat 1s infinite;
+}
+
+.heart:before,
+.heart:after{
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart:after{
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+@keyframes heartbeat{
+    0%{
+        transform: scale(.75);
+    }
+
+    20%{
+        transform: scale(1);
+    }
+
+    40%{
+        transform: scale(.75);
+    }
+
+    60%{
+        transform: scale(1);
+    }
+
+    80%{
+        transform: scale(.75);
+    }
+
+    100%{
+        transform: scale(.75);
+    }
+}
+
+.typing{
+    display: inline-block;
+}
+
+@keyframes typing{
+    0%{
+        width: 0;
+        border-right: .06em solid #000;
+    }
+
+    99%{
+        border-right: .06em solid #000;
+    }
+
+    100%{
+        border-right: 0;
+    }
+}
+
+.typing {
+    animation: typing 1.7s steps(28,end);
+}
+
+.space{
+    float: right;
+    width: 10%;
+    margin-top: 50px;
+    margin-left: 40%;
+    height: 130px;
+    background-color: blue;
+    background-image: ;
+    border-radius: 50%;
+}
